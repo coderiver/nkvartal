@@ -1,9 +1,15 @@
-// default layout
-.l
+// default layout 
+.row
 	+clr
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+	max-width: 1100px
+	margin: 0 auto
+[class^=col]
+	float: left
+	padding-left: 35px
+	&:first-child
+		padding-left: 0
+		
+@for $i from 1 through 12
+	.col#{$i}
+		width: 8.333% * $i
+	
